@@ -25,8 +25,9 @@ const projects = [
     ],
     image:
       'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80',
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://github.com/developer-kamran/SK_Tech_ai_company_assistant',
+    githubUrl:
+      'https://github.com/developer-kamran/SK_Tech_ai_company_assistant',
     featured: true,
     gradient: 'from-cyan/20 to-blue-900/20',
   },
@@ -51,8 +52,8 @@ const projects = [
     ],
     image:
       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://github.com/developer-kamran/Nextjs-digital-marketplace',
+    githubUrl: 'https://github.com/developer-kamran/Nextjs-digital-marketplace',
     featured: true,
     gradient: 'from-purple/20 to-indigo-900/20',
   },
@@ -70,8 +71,8 @@ const projects = [
     tech: ['Django', 'PostgreSQL', 'Stripe', 'Bootstrap'],
     image:
       'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://github.com/developer-kamran/Django-ecommerce-store',
+    githubUrl: 'https://github.com/developer-kamran/Django-ecommerce-store',
     featured: false,
     gradient: 'from-purple/20 to-pink-900/20',
   },
@@ -89,8 +90,10 @@ const projects = [
     tech: ['React', 'Express', 'MongoDB', 'GraphQL', 'Apollo Client'],
     image:
       'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl:
+      'https://github.com/developer-kamran/Fullstack-project-management-app',
+    githubUrl:
+      'https://github.com/developer-kamran/Fullstack-project-management-app',
     featured: false,
     gradient: 'from-green-900/20 to-cyan/20',
   },
