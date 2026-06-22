@@ -305,6 +305,101 @@ export default function ProjectsSection() {
           </a>
         </motion.div>
       </div>
+      {/* Other Projects */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ delay: 1, duration: 0.6 }}
+        className='mt-20'
+      >
+        <div className='text-center mb-10'>
+          <p
+            className='text-sm font-mono mb-2'
+            style={{ color: 'hsl(var(--cyan))' }}
+          >
+            // more of my work
+          </p>
+          <h3 className='text-2xl font-bold'>
+            Other <span className='gradient-text'>Projects</span>
+          </h3>
+          <div className='section-divider' />
+        </div>
+
+        <div className='grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-5xl mx-auto'>
+          {[
+            {
+              title: 'Vanilla JS Projects',
+              desc: 'A collection of interactive mini-apps and experiments built with plain JavaScript — no frameworks, just the fundamentals.',
+              tech: ['JavaScript', 'HTML', 'CSS'],
+              url: 'https://my-vanillajs-projects.netlify.app',
+            },
+            {
+              title: 'React Projects',
+              desc: 'A showcase of React applications demonstrating component architecture, state management, hooks, and API integrations.',
+              tech: ['React', 'JavaScript', 'CSS'],
+              url: 'https://my-reactjs-projects.netlify.app',
+            },
+            {
+              title: 'HTML & CSS Projects',
+              desc: 'Pixel-perfect UI clones, landing pages, and layout experiments focused on responsive design and CSS craftsmanship.',
+              tech: ['HTML', 'CSS'],
+              url: 'https://my-htmlcss-projects.netlify.app',
+            },
+          ].map((project) => (
+            <a
+              key={project.title}
+              href={project.url}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='group relative rounded-2xl p-6 border flex flex-col gap-3 transition-all duration-200 card-hover'
+              style={{
+                background: 'hsl(var(--card))',
+                borderColor: 'hsl(var(--border))',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'hsl(var(--cyan) / 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'hsl(var(--border))';
+              }}
+            >
+              <div className='flex items-start justify-between'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='32'
+                  height='32'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  stroke='currentColor'
+                  strokeWidth='1.5'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  style={{ color: 'hsl(var(--cyan))' }}
+                >
+                  <path d='M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z' />
+                </svg>
+                <ExternalLink
+                  className='w-4 h-4 opacity-40 group-hover:opacity-100 transition-opacity'
+                  style={{ color: 'hsl(var(--cyan))' }}
+                />
+              </div>
+              <h4 className='font-semibold text-foreground group-hover:text-cyan transition-colors'>
+                {project.title}
+              </h4>
+              <p className='text-sm text-muted-foreground leading-relaxed flex-1'>
+                {project.desc}
+              </p>
+              <div className='flex flex-wrap gap-1.5 mt-1'>
+                {project.tech.map((t) => (
+                  <span key={t} className='tech-badge'>
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </a>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 }
